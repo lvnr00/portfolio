@@ -3,13 +3,15 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 header {
 	background-color: #fff;
 	color: #333;
 	padding: 20px;
-	text-align: center;
 }
 
 nav ul {
@@ -34,14 +36,16 @@ nav ul li a {
 
 #projects {
 	padding: 50px;
-	background-color: #fff;
+	background-color: #f2f2f2;
 	text-align: center;
+	flex: 1;
 }
 
 .project {
 	margin-bottom: 50px;
 	display: inline-block;
 	text-align: left;
+	background-color: #fff;
 }
 
 .project h2 {
@@ -54,7 +58,7 @@ nav ul li a {
 
 .project a {
 	display: inline-block;
-	background-color: #fff;
+	background-color: #333;
 	color: #fff;
 	padding: 10px;
 	text-decoration: none;
@@ -64,17 +68,5 @@ nav ul li a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-#header-content #header-text {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#header-content h1, #header-content h2 {
-	margin: 0;
-}
-
-#header-content h1 {
-	font-size: 2em
+	width: 100%;
+	max-width: 1200px;
