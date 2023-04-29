@@ -8,6 +8,9 @@ header {
 	background-color: #333;
 	color: #fff;
 	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 nav ul {
@@ -52,4 +55,19 @@ nav ul li a {
 	color: #fff;
 	padding: 10px;
 	text-decoration: none;
+}
+
+#header-content {
+	display: flex;
+	align-items: center;
+}
+
+#header-content h1 {
+	margin: 0;
+	font-size: 2em;
+}
+
+#header-content h2 {
+	margin: 0;
+	font-size: 1.5em;
 }
