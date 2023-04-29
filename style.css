@@ -1,16 +1,15 @@
-/* Estilos generales */
+/* Estilos globales */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #fff; /* establece el fondo en blanco */
-  display: flex; /* cambia el modelo de diseño a flexbox */
-  flex-direction: column; /* apila los elementos en una columna */
-  justify-content: center; /* centra verticalmente el contenido */
-  align-items: center; /* centra horizontalmente el contenido */
-  min-height: 100vh; /* establece la altura mínima de la página al 100% del alto de la ventana gráfica */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-
 
 /* Estilos de la navegación */
 nav {
@@ -48,9 +47,82 @@ nav a:hover {
 /* Estilos del header */
 header {
   height: 400px;
-  background-image: url(header-bg.jpg);
-  background-size: cover;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+header h1:hover {
+  color: #999;
+}
+
+header p {
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Estilos de los proyectos */
+#projects {
+  margin-top: 50px;
+}
+
+#projects h2 {
+  text-align: center;
+}
+
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+#projects li {
+  width: calc(25% - 20px);
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+#projects img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#projects h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#projects h4 {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Estilos de la sección de contacto */
+#contact {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 1.2rem;
+  color: #666;
+}
