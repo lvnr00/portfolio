@@ -3,7 +3,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: #fff; /* establece el fondo en blanco */
+  display: flex; /* cambia el modelo de diseño a flexbox */
+  flex-direction: column; /* apila los elementos en una columna */
+  justify-content: center; /* centra verticalmente el contenido */
+  align-items: center; /* centra horizontalmente el contenido */
+  min-height: 100vh; /* establece la altura mínima de la página al 100% del alto de la ventana gráfica */
 }
+
 
 /* Estilos de la navegación */
 nav {
