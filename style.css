@@ -1,73 +1,49 @@
+/* Estilos generales */
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #fff;
-	min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-#wrapper {
-	display: flex;
-	flex-direction: column;
-}
-
-header {
-	background-color: #fff;
-	color: #333;
-	padding: 50px;
-	text-align: left;
-	align-self: stretch;
+/* Estilos de la navegación */
+nav {
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-	display: inline-block;
-	margin-right: 20px;
+nav li {
+  margin: 0 10px;
 }
 
-nav ul li:last-child {
-	margin-right: 0;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-nav ul li a {
-	color: #333;
-	text-decoration: none;
+nav a:hover {
+  background-color: #fff;
+  color: #333;
 }
 
-#projects {
-	padding: 50px;
-	background-color: #fff;
-	text-align: center;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.project {
-	margin-bottom: 50px;
-	display: inline-block;
-	text-align: left;
-	background-color: #fff;
-}
-
-.project h2 {
-	margin-top: 0;
-}
-
-.project p {
-	margin-top: 0;
-}
-
-.project a {
-	display: inline-block;
-	background-color: #333;
-	color: #fff;
-	padding: 10px;
-}
+/* Estilos del header */
+header {
+  height: 400px;
+  background-image: url(header-bg.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
