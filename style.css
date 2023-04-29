@@ -42,7 +42,6 @@ nav ul li a {
 	margin-bottom: 50px;
 	display: inline-block;
 	text-align: left;
-	background-color: #fff;
 }
 
 .project h2 {
@@ -55,7 +54,7 @@ nav ul li a {
 
 .project a {
 	display: inline-block;
-	background-color: #333;
+	background-color: #fff;
 	color: #fff;
 	padding: 10px;
 	text-decoration: none;
@@ -65,7 +64,6 @@ nav ul li a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	text-align: center;
 }
 
 #header-content #header-text {
@@ -75,4 +73,8 @@ nav ul li a {
 }
 
 #header-content h1, #header-content h2 {
-	margin: 0
+	margin: 0;
+}
+
+#header-content h1 {
+	font-size: 2em
