@@ -9,6 +9,7 @@ header {
 	background-color: #fff;
 	color: #333;
 	padding: 20px;
+	text-align: center;
 }
 
 nav ul {
@@ -34,10 +35,13 @@ nav ul li a {
 #projects {
 	padding: 50px;
 	background-color: #fff;
+	text-align: center;
 }
 
 .project {
 	margin-bottom: 50px;
+	display: inline-block;
+	text-align: left;
 }
 
 .project h2 {
@@ -65,7 +69,7 @@ nav ul li a {
 #header-content #header-text {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 }
 
 #header-content h1, #header-content h2 {
@@ -73,14 +77,4 @@ nav ul li a {
 }
 
 #header-content h1 {
-	font-size: 2em;
-}
-
-#header-content h2 {
-	font-size: 1.5em;
-}
-
-#header-content nav {
-	display: flex;
-	align-items: center;
-}
+	font-size: 2em
