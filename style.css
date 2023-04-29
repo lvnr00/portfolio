@@ -12,6 +12,11 @@ body {
   background-color: #fff;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 nav {
   background-color: #fff;
   position: sticky;
@@ -21,13 +26,10 @@ nav {
 
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 0;
 }
 
 nav li {
@@ -36,7 +38,6 @@ nav li {
 
 nav a {
   display: block;
-  padding: 10px 20px;
   color: #333;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -48,8 +49,7 @@ nav a:hover {
 
 header {
   max-width: 960px;
-  margin: 80px auto 40px;
-  text-align: center;
+  margin: 80px 0;
 }
 
 h1 {
@@ -62,4 +62,3 @@ h2 {
   font-weight: normal;
   margin: 0;
 }
-
