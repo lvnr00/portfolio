@@ -1,128 +1,73 @@
-/* Estilos globales */
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* alinea la web a la izquierda */
-  min-height: 100vh;
 }
 
-/* Estilos de la navegación */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
 nav {
   background-color: #333;
   color: #fff;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha del nav */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin: 0 10px;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
 }
 
-nav a:hover {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Estilos del header */
-header {
-  height: 400px;
-  background-color: #fff;
+.hero {
+  background-image: url(hero.jpg);
+  background-size: cover;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  text-align: center;
-  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha del header */
-  box-sizing: border-box; /* asegura que el padding se incluya en el ancho total */
-}
-
-header h1 {
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 20px;
-  transition: color 0.3s ease;
-}
-
-header h1:hover {
-  color: #999;
-}
-
-header p {
-  font-size: 1.5rem;
-  color: #666;
-  text-align: center;
-  max-width: 600px;
-}
-
-/* Estilos de los proyectos */
-#projects {
-  margin-top: 50px;
-  width: 100%;
-  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha de los proyectos */
-  box-sizing: border-box; /* asegura que el padding se incluya en el ancho total */
-}
-
-#projects h2 {
+  color: #fff;
   text-align: center;
 }
 
-#projects ul {
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.case-studies {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0;
-  margin: 0;
+  padding: 2rem;
 }
 
-#projects li {
-  width: calc(25% - 20px);
-  margin-bottom: 40px;
-  list-style: none;
+.project {
+  width: calc(50% - 1rem);
+  margin-bottom: 2rem;
 }
 
-#projects img {
+.project img {
   width: 100%;
-  border-radius: 5px;
+  height: auto;
 }
 
-#projects h3 {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-#projects h4 {
-  font-size: 1rem;
-  color: #666;
-  text-align: center;
-}
-
-/* Estilos de la sección de contacto */
-#contact {
-  margin-top: 50px;
-  width: 100%;
-  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha de la sección de contacto */
-  box-sizing: border-box; /* asegura que el padding se incluya en el ancho total */
+.project h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0
