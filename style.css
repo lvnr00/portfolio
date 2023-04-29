@@ -2,15 +2,13 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	background-color: #fff;
 }
 
 header {
 	background-color: #fff;
-	color: #fff;
+	color: #333;
 	padding: 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
 nav ul {
@@ -29,12 +27,13 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-	color: #fff;
+	color: #333;
 	text-decoration: none;
 }
 
 #projects {
 	padding: 50px;
+	background-color: #fff;
 }
 
 .project {
@@ -51,7 +50,7 @@ nav ul li a {
 
 .project a {
 	display: inline-block;
-	background-color: #fff;
+	background-color: #333;
 	color: #fff;
 	padding: 10px;
 	text-decoration: none;
@@ -59,15 +58,29 @@ nav ul li a {
 
 #header-content {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 
-#header-content h1 {
+#header-content #header-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#header-content h1, #header-content h2 {
 	margin: 0;
+}
+
+#header-content h1 {
 	font-size: 2em;
 }
 
 #header-content h2 {
-	margin: 0;
 	font-size: 1.5em;
+}
+
+#header-content nav {
+	display: flex;
+	align-items: center;
 }
