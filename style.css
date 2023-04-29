@@ -6,8 +6,7 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* alinea la web a la izquierda */
   min-height: 100vh;
 }
 
@@ -19,6 +18,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha del nav */
 }
 
 nav ul {
@@ -52,6 +53,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha del header */
+  box-sizing: border-box; /* asegura que el padding se incluya en el ancho total */
 }
 
 header h1 {
@@ -75,6 +80,9 @@ header p {
 /* Estilos de los proyectos */
 #projects {
   margin-top: 50px;
+  width: 100%;
+  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha de los proyectos */
+  box-sizing: border-box; /* asegura que el padding se incluya en el ancho total */
 }
 
 #projects h2 {
@@ -115,14 +123,6 @@ header p {
 /* Estilos de la sección de contacto */
 #contact {
   margin-top: 50px;
-  text-align: center;
-}
-
-#contact h2 {
-  margin-bottom: 20px;
-}
-
-#contact p {
-  font-size: 1.2rem;
-  color: #666;
-}
+  width: 100%;
+  padding: 0 20px; /* agrega un espacio a la izquierda y a la derecha de la sección de contacto */
+  box-sizing: border-box; /* asegura que el padding se incluya en el ancho total */
