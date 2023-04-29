@@ -3,16 +3,20 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
-	display: flex;
-	flex-direction: column;
 	min-height: 100vh;
 }
 
-#hero {
+#wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
 	background-color: #333;
 	color: #fff;
 	padding: 50px;
-	text-align: center;
+	text-align: left;
+	align-self: stretch;
 }
 
 nav ul {
