@@ -49,15 +49,23 @@ nav a:hover {
   color: #bbb;
 }
 
+
+.project {
+  height: 48%;
+  width: 48%;
+  margin-bottom: 50px;
+  overflow:hidden;
+}
+
 .project-image {
   max-width: 100%;
-  height: auto;
   transition: transform 0.3s ease;
-  transform-origin: center;
+  transform-origin: 50% 50%;
 }
 
 .project-image:hover {
   transform: scale(1.1);
+  width: 100%;
 }
 
 
@@ -78,10 +86,6 @@ h1 {
   justify-content: space-between;
 }
 
-.project {
-  width: 48%;
-  margin-bottom: 50px;
-}
 
 .about {
   width: 100%;
