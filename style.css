@@ -52,7 +52,14 @@ nav a:hover {
 .project-image {
   max-width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
+  transform-origin: center;
 }
+
+.project-image:hover {
+  transform: scale(1.1);
+}
+
 
 header {
   max-width: 960px;
@@ -100,3 +107,4 @@ h3 {
 nav ul li a.active {
   font-weight: bold;
 }
+
