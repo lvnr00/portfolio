@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
 </head>
 <body>
-  <div class="container">
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">HOME</a></li>
-        <li><a href="about.html">ABOUT ME</a></li>
-        <li><a href="mailto:diegoechevarriaz@gmail.com">CONTACT</a></li>
-      </ul>
-    </nav>
-    <header>
-      <h1><b>DIEGO ECHEVARRÍA</b> UX/UI DESIGN</h1>
-    </header>
-    <main>
-      <section class="case-studies">
-        <div class="project">
-          <img src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1" class="project-image">
-          <p>UX DESIGN - UI DESIGN</p>
-          <h3>PROYECTO 1</h3>
-        </div>  
-        <div class="project project2">
-          <img src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 2" class="project-image">
-          <p>UX DESIGN - UX RESEARCH</p>
-          <h3>PROYECTO 2</h3>
-        </div>        
-        <div class="project">
-          <img src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 3" class="project-image">
-          <p>UX DESIGN - UI DESIGN</p>
-          <h3>PROYECTO 3</h3>
-        </div>  
-        <div class="project">
-          <img src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 4" class="project-image">
-          <p>UX DESIGN - UI DESIGN - UX RESEARCH</p>
-          <h3>PROYECTO 4</h3>
-        </div>  
-      </section>
-      
-    </main>
-    <footer>
-      <p>© Diego Echevarría, 2023</p>
-    </footer>
-  </div>
+    <div class="page-wrapper">
+        <header class="header">
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__item"><a href="index.html" class="active">HOME</a></li>
+                    <li class="header__item"><a href="about.html">ABOUT ME</a></li>
+                    <li class="header__item"><a href="mailto:diegoechevarriaz@gmail.com">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header> 
+        <div class="main">
+            <div class="main__container container">
+                <p class="main__name"><b>DIEGO ECHEVARRÍA</b> UX/UI DESIGN</p>            
+                <div class="main__project">
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1" class="project-image">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">PROYECTO 1</h2>
+                    </div>
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1" class="project-image">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">PROYECTO 2</h2>
+                    </div>
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1" class="project-image">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">PROYECTO 3</h2>
+                    </div>
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1" class="project-image">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">PROYECTO 4</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__container container">
+                <p class="footer__text">© Diego Echevarría, 2023</p>
+            </div> 
+        </footer>
+    </div>
 </body>
 </html>
