@@ -1,70 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <title>DIEGO ECHEVARRIA</title>
-    <link rel="shortcut icon" href="https://i.ibb.co/nCM7fBX/fav.png" type="image/x-icon">
-</head>
+* {
+    box-sizing: border-box;
+    transition: .2s linear;
+    transition: all 0.4s;
+}
 
-<body>
-    <div class="page-wrapper">
-        <header class="header">
-            <nav class="header__menu">
-                <ul class="header__list">
-                    <li class="header__item"><a href="index.html" class="active">Home</a></li>
-                    <li class="header__item"><a href="about.html">About Me</a></li>
-                    <li class="header__item"><a href="mailto:diegoechevarriaz@gmail.com">Contact</a></li>
-                </ul>
-            </nav>
-            
-        </header> 
+@font-face {
+    font-family: Reyhan;
+    src: url("./fonts/Reyhan-Black.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
-        <div class="main">
-            <div class="main__container container">
-                <p class="main__name"><img src="https://i.ibb.co/N3JRGwQ/prtfl.png" class="portbanner"></p>            
-                <div class="main__project">
-                    <div class="main__project-box">
-                        <div class="main__project-img">
-                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
-                        </div>
-                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
-                        <h2 class="main__project-title">Proyecto 1</h2>
-                    </div>
-                    <div class="main__project-box">
-                        <div class="main__project-img">
-                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
-                        </div>
-                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
-                        <h2 class="main__project-title">Proyecto 2</h2>
-                    </div>
-                    <div class="main__project-box">
-                        <div class="main__project-img">
-                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
-                        </div>
-                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
-                        <h2 class="main__project-title">Proyecto 3</h2>
-                    </div>
-                    <div class="main__project-box">
-                        <div class="main__project-img">
-                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
-                        </div>
-                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
-                        <h2 class="main__project-title">Proyecto 4</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="footer__container container">
-                <p class="footer__text">Diego Echevarría © 2023</p>
-            </div> 
-        </footer>
-    </div>
-</body>
-</html>
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    /* font-family: Inter, sans-serif; */
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: rgb(0, 0, 0);
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.page-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 20px 0 20px 0;
+    margin-bottom: 50px;
+    width: 100%;
+    background-color: black;
+}
+
+.header__menu {
+    max-width: 70%; 
+    margin: 0 auto;
+    position: relative;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    gap: 20px;
+}
+
+.header__item:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.header__logo {
+    position: absolute;
+    right: 0;
+    max-width: 3%;
+    min-width: 25px;
+    bottom: 0;
+}
+
+
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.main__name {
+    font-size: 40px;
+    margin: 0 0 100px 0;
+    text-align: center;
+}
+
+
+.main__project { 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.main__project-box {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main__project-img {
+    overflow: hidden;
+    max-width: 1200px;
+    max-height: 300px;
+    margin-bottom: 5px;
+}
+
+.main__img {
+    width: 100%;
+    height: 100%;
+}
+
+.main__img:hover {
+    transform: scale(1.2);
+} 
+
+.main__project-sub {
+    margin: 0 0 8px 0;
+}
+
+.main__project-title {
+    margin: 0 0 80px 0;
+}
+
+
+@media screen and (max-width: 400px) {
+    .main__project-box {
+      width: 100%;
+      height: 100%;
+      
+    }
+    .main__project-img {
+        overflow: hidden;
+        width: 400px;
+        max-height: 200px;
+        
+    }
+    .main__project {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__project-box {
+      width: 100%;
+      height: 100%;
+    }
+    .main__project-img {
+        overflow: hidden;
+        width: 768px;
+        max-height: 200px;
+    }
+    .main__project {
+        flex-direction: column;
+    }
+}
+
+.portbanner {
+    max-width: 100%;
+    height: auto;
+  }
