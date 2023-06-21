@@ -1,105 +1,70 @@
-* {
-    box-sizing: border-box;
-    transition: .2s linear;
-    transition: all 0.4s;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>DIEGO ECHEVARRIA</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/nCM7fBX/fav.png" type="image/x-icon">
+</head>
 
-body {
-    margin: 0;
-    padding: 0;
-    color: #333;
-    font-family: Quicksand, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-}
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li class="header__item"><a href="index.html" class="active">Home</a></li>
+                    <li class="header__item"><a href="about.html">About Me</a></li>
+                    <li class="header__item"><a href="mailto:diegoechevarriaz@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+            
+        </header> 
 
-nav ul li a.active {
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-.page-wrapper {
-    width: 100%;
-}
-
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 3;
-    padding: 20px 0 20px 0;
-    margin-bottom: 50px;
-    width: 100%;
-    background-color: #fff;
-}
-
-.header__list {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-    gap: 20px;
-    max-width: 80%; 
-    margin: 0 auto;
-}
-
-.header__item:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-.container {
-    max-width: 80%;
-    margin: 0 auto;
-    text-transform: uppercase;
-}
-
-.main__name {
-    font-size: 40px;
-    margin: 0 0 70px 0;
-}
-
-.main__project { 
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-} 
-
-.main__project-box {
-    width: 48%;
-    overflow: hidden;
-}
-
-.main__project-img {
-    overflow: hidden;
-    max-width: 580px;
-    max-height: 580px;
-    margin-bottom: 5px;
-}
-
-.main__img {
-    width: 100%;
-    height: 100%;
-}
-
-.main__img:hover {
-    transform: scale(1.2);
-} 
-
-.main__project-sub {
-    margin: 0 0 8px 0;
-}
-
-.main__project-title {
-    margin: 0 0 40px 0;
-}
-
-/* .footer {
-    max-width: 80%;
-    margin: 0 auto;
-} */
-
+        <div class="main">
+            <div class="main__container container">
+                <p class="main__name"><img src="https://i.ibb.co/N3JRGwQ/prtfl.png" class="portbanner"></p>            
+                <div class="main__project">
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">Proyecto 1</h2>
+                    </div>
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">Proyecto 2</h2>
+                    </div>
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">Proyecto 3</h2>
+                    </div>
+                    <div class="main__project-box">
+                        <div class="main__project-img">
+                            <img class="main__img" src="https://storage.googleapis.com/uxfolio/63e4fa9350d9aa00032ad138/64089ee9deb8e80002982a6c/6X2Y5x9P6kVE41Jr.png" alt="Proyecto 1">
+                        </div>
+                        <p class="main__project-sub">UX DESIGN - UI DESIGN</p>
+                        <h2 class="main__project-title">Proyecto 4</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__container container">
+                <p class="footer__text">Diego Echevarría © 2023</p>
+            </div> 
+        </footer>
+    </div>
+</body>
+</html>
