@@ -1,0 +1,168 @@
+.block1 {
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: 1024px) {
+        overflow: visible;
+    }
+}
+
+.block01-img {
+    display: none;
+    @media screen and (max-width: 1024px) {
+        display: block;
+        margin: 0;
+    }
+}
+
+.block02-img {
+    display: none;
+    @media screen and (max-width: 1024px) {
+        display: block;
+        margin: 0;
+    }
+}
+
+.block03-img {
+    display: none;
+    @media screen and (max-width: 1024px) {
+        display: block;
+        margin: 0;
+    }
+}
+
+.photo01 {
+    max-width: 100%;
+}
+
+.photo02 {
+    max-width: 100%;
+}
+
+.photo03 {
+    max-width: 100%;
+}
+
+.block2 {
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: 1024px) {
+        overflow: visible;
+    }
+}
+
+.block3 {
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+        overflow: visible;
+    }
+}
+
+.block4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (max-width: 1024px) {
+        align-items: center;
+    }
+}
+
+.block4-text {
+    @media screen and (max-width: 1024px) {
+        order: 1;
+    }
+}
+
+.block4-img {
+    @media screen and (max-width: 1024px) {
+        order: 2;
+    }
+}
+
+.photo1 {
+    max-width: 690px;
+    position: absolute;
+    right: 0;
+    top: 150px;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.photo2 {
+    max-width: 400px;
+    position: absolute;
+    left: 90px;
+    top: 90px;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.photo3 {
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: -600px;
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.photo4 {
+    max-width: 100%;
+}
+
+.style__title {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.style__text {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.color1 {
+    color: #FFF;
+    background: black;
+}
+
+.color2 {
+    color: black;
+    background-color: #808080;
+}
+
+.color3 {
+    color: black;
+    background: white;
+}
+
+.color4 {
+    color: white;
+    background: #7A1313;
+}
+
+/* .interactive-photo {
+    margin-bottom: 1000px;
+} */
+
+.photo__subtitle-block {
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+}
+
+.photo-block1 {
+    margin-bottom: 208px;
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 30px;
+    }
+}
+
+.photo-block2 {
+    margin-bottom: 620px;
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 30px;
+    }
+}

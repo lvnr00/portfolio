@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/fav.png" type="image/x-icon">
+    <title>Diego Echevarria / PORTFOLIO</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__logo">
+                    <a href="../index.html"><img class="logo" src="../img/logo.svg" /></a>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <a href="../index.html"><li class="header__item">Home</li></a>
+                        <a href="./about.html"><li class="header__item">About me</li></a>
+                        <a href="./intouch.html"><li class="header__item">Contact</li></a>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <div class="about">
+            <div class="about__container container">
+                <h1 class="about__title">About me</h1>
+                <div class="about1">
+                    <img class="diego-img" src="../img/diego-img.jpg" />
+                </div>
+                <div class="about01">
+                    <img class="diego-img01" src="../img/diego-img01.jpg" />
+                </div>
+                <div class="about2">
+                    <h1 class="about2__title">About me</h1>
+                    <p class="intouch__text">I’m Diego, a passionate UX/UI designer
+                        with a graphic design background who loves art,
+                        cinema, and computer stuff.
+                    </p>
+                    <div class="about__info">
+                        <div class="about__tools">
+                            <h3 class="subtitle-main">Tools</h3>
+                            <div class="about__tools-icons">
+                                <img class="tools" src="../img/tool1.svg" />
+                                <img class="tools" src="../img/tool2.svg" />
+                                <img class="tools" src="../img/tool3.svg" />
+                                <img class="tools" src="../img/tool4.svg" />
+                            </div>
+                        </div>
+                        <div class="about__skills-block">
+                            <h3 class="subtitle-main">Skills</h3>
+                            <div class="about__skills">
+                                <div class="skills1">
+                                    <p class="skill">User Research</p>
+                                    <p class="skill">Wireframing</p>
+                                    <p class="skill">Prototyping</p>
+                                    <p class="skill">User Flow</p>
+                                    <p class="skill">User Journey</p>
+                                    <p class="skill">Empathy Maps</p>
+                                </div>
+                                <div class="skills2">
+                                    <p class="skill">Personas</p>
+                                    <p class="skill">Mockups</p>
+                                    <p class="skill">Responsive Design</p>
+                                    <p class="skill">Graphic Design</p>
+                                    <p class="skill">HTML</p>
+                                    <p class="skill">CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="subtitle-main">Certificates</h3>
+                    <p>Google UX Design Certificate, Coursera <span><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/NP82GZA8TTMB" target="_blank" style="text-decoration: underline;">(see here)</a>
+                    <h3 class="subtitle-main">Languages</h3>
+                    <div class="languages">
+                        <p class="language1">Spanish (native) </p>
+                        <p class="language1">English (fluent)</p>
+                    </div>
+                    <div class="about__button">
+                        <a href="intouch.html"><button class="main__button">Get in touch <img src="../img/arrow1.svg" /></button></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__container container">
+                <p class="footer__text">© 2023 Diego Echevarria</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.header__menu').classList.toggle('open');
+        })
+    </script>
+</body>
+</html>

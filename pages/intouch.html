@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/fav.png" type="image/x-icon">
+    <title>Diego Echevarria / PORTFOLIO</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__logo">
+                    <a href="../index.html"><img class="logo" src="../img/logo.svg" /></a>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <a href="../index.html"><li class="header__item">Home</li></a>
+                        <a href="./about.html"><li class="header__item">About me</li></a>
+                        <a href="./intouch.html"><li class="header__item">Contact</li></a>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <div class="intouch">
+            <div class="intouch__container container">
+                <div class="intouch__title-block">
+                    <h1>Let’s get in touch</h1>
+                    <p class="intouch__text">You can reach me through these methods.</p>
+                </div>
+                <div class="intouch__links">
+                    <a href="mailto:diegoechevarriaz@gmail.com"><button class="link"><img class="icon" src="../img/icon.svg" />Email<img class="arrow3" src="../img/arrow1.svg" /></button></a>
+                    <a href="https://www.linkedin.com/in/diegoechevarriaz/" target="_blank"><button class="link"><img class="icon" src="../img/icon2.svg" />LinkedIn<img class="arrow3" src="../img/arrow1.svg" /></button></a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__container container">
+                <p class="footer__text">© 2023 Diego Echevarria</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.header__menu').classList.toggle('open');
+        })
+    </script>
+</body>
+</html>

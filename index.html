@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/fav.png" type="image/x-icon">
+    <title>Diego Echevarria / PORTFOLIO</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <div class="header__logo">
+                    <a href="index.html"><img class="logo" src="../img/logo.svg" /></a>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <a href="index.html"><li class="header__item">Home</li></a>
+                        <a href="./pages/about.html"><li class="header__item">About me</li></a>
+                        <a href="./pages/intouch.html"><li class="header__item">Contact</li></a>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="main__container container">
+                <div class="main__img-block">
+                    <img class="main__img" src="../img/main-img.jpg" />
+                </div>
+                <div class="main__text-block">
+                    <h2 class="main__title title">Hey there!</h2>
+                    <h3 class="main__subtitle">I’m Diego, a UX/UI designer
+                        and I’m ready to work.</h3>
+                    <a href="./pages/intouch.html"><button class="main__button">Get in touch <img class="arrow1" src="../img/arrow1.svg" /></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery__container container">
+                <div class="gallery__block">
+                    <div class="gallery__img-block">
+                        <a href="./pages/meal-master.html"><img class="gallery__img" src="../img/gallery1.jpg" /></a>
+                    </div>
+                    <div class="gallery__img-block1">
+                        <a href="./pages/meal-master.html"><img class="gallery__img1" src="../img/gallery01.jpg" /></a>
+                    </div>
+                    <div class="gallery__text-block">
+                        <h2 class="gallery__title title2">Meal Master</h2>
+                        <p class="gallery__text text">UX / UI</p>
+                    </div>
+                    <button class="gallery__arrow">
+                        <a href="./pages/meal-master.html"><img class="arrow2" src="../img/arrow2.svg" /></a>
+                    </button>
+                </div>
+                <div class="gallery__block">
+                    <div class="gallery__img-block">
+                        <a href="./pages/pirate.html"><img class="gallery__img" src="../img/gallery2.jpg" /></a>
+                    </div>
+                    <div class="gallery__img-block1">
+                        <a href="./pages/pirate.html"><img class="gallery__img1" src="../img/gallery02.jpg" /></a>
+                    </div>
+                    <div class="gallery__text-block">
+                        <h2 class="gallery__title title2">PirateBlood Studios</h2>
+                        <p class="gallery__text text">UX / UI</p>
+                    </div>
+                    <button class="gallery__arrow">
+                        <a href="./pages/pirate.html"><img class="arrow2" src="../img/arrow2.svg" /></a>
+                    </button>
+                </div>
+                <div class="gallery__block">
+                    <div class="gallery__img-block">
+                        <a href="./pages/julia.html"><img class="gallery__img" src="../img/gallery3.jpg" /></a>
+                    </div>
+                    <div class="gallery__img-block1">
+                        <a href="./pages/julia.html"><img class="gallery__img1" src="../img/gallery03.jpg" /></a>
+                    </div>
+                    <div class="gallery__text-block">
+                        <h2 class="gallery__title title2">Julia Sobchenko</h2>
+                        <p class="gallery__text text">UX / UI</p>
+                    </div>
+                    <button class="gallery__arrow">
+                        <a href="./pages/julia.html"><img class="arrow2" src="../img/arrow2.svg" /></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__container container">
+                <p class="footer__text">© 2023 Diego Echevarria</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.header__menu').classList.toggle('open');
+        })
+    </script>
+</body>
+</html>
