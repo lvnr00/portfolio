@@ -46,8 +46,18 @@ button:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    @media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 1201px) {
+    .container {
         max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
     }
 }
 
