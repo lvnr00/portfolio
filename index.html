@@ -3,104 +3,742 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/fav.png" type="image/x-icon">
-    <title>Diego Echevarria / PORTFOLIO</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Diego Echevarria</title>
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-gray-200: rgba(245, 245, 245, 1);
+            --color-gray-300: rgba(167, 169, 169, 1);
+            --color-gray-400: rgba(119, 124, 124, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-brown-600: rgba(94, 82, 64, 1);
+            --color-charcoal-700: rgba(31, 33, 33, 1);
+            --color-charcoal-800: rgba(38, 40, 40, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            --color-slate-900-rgb: 19, 52, 59;
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-size-base: 14px;
+            --font-size-lg: 16px;
+            --font-size-xl: 18px;
+            --font-size-2xl: 20px;
+            --font-size-3xl: 24px;
+            --font-size-4xl: 30px;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 550;
+            --line-height-normal: 1.5;
+            --line-height-tight: 1.2;
+            --space-8: 8px;
+            --space-16: 16px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --radius-base: 8px;
+            --radius-lg: 12px;
+            --duration-normal: 250ms;
+            --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+
+
+        @font-face {
+            font-family: 'FKGroteskNeue';
+            src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-base);
+            font-family: var(--font-family-base);
+            line-height: var(--line-height-normal);
+            color: var(--color-text);
+            background-color: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-32);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .designer-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 2px solid var(--color-black);
+            background: var(--color-gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-32);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .designer-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .designer-photo-placeholder {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .hero h1 {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-semibold);
+            line-height: var(--line-height-tight);
+            margin-bottom: var(--space-24);
+        }
+
+        .hero p {
+            font-size: var(--font-size-xl);
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Scroll Down Arrow */
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 1;
+            transition: opacity 0.3s var(--ease-standard);
+            cursor: pointer;
+        }
+
+        .scroll-down.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-down-text {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text-secondary);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .scroll-down-arrow {
+            font-size: 24px;
+            color: var(--color-text);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Work Section */
+        .work-section {
+            padding: 80px 0 120px;
+        }
+
+        .work-title {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-medium);
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--color-text);
+        }
+
+        /* Carousel Container */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            will-change: transform;
+        }
+
+        .carousel-track.left {
+            animation: scrollLeft 30s linear infinite;
+        }
+
+        .carousel-track.right {
+            animation: scrollRight 30s linear infinite;
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Email Card */
+        .email-card {
+            flex-shrink: 0;
+            width: 280px;
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform var(--duration-normal) var(--ease-standard),
+                        box-shadow var(--duration-normal) var(--ease-standard);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .email-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .email-card-content {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .email-card-placeholder {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: var(--color-gray-200);
+            border: 2px dashed var(--color-border);
+            border-radius: var(--radius-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .email-card-button {
+            width: 100%;
+            padding: 12px 24px;
+            background: var(--color-black);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-base);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+            text-align: center;
+        }
+
+        .email-card-button:hover {
+            background: rgba(0, 0, 0, 0.85);
+            transform: translateY(-1px);
+        }
+
+
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-32);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.2s var(--ease-standard);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: slideUp 0.3s var(--ease-standard);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            background: var(--color-white);
+            border: 1px solid var(--color-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--color-black);
+            transition: transform var(--duration-normal) var(--ease-standard);
+            z-index: 1001;
+        }
+
+        .modal-close:hover {
+            transform: scale(1.1);
+            background: var(--color-gray-200);
+        }
+
+        .modal-email-image {
+            max-width: 100%;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: var(--radius-lg);
+            background: var(--color-surface);
+            border: 2px dashed var(--color-border);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px var(--space-32);
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 500px;
+        }
+
+        .contact-title {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-32);
+        }
+
+        .contact-text {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: var(--font-size-lg);
+            color: var(--color-black);
+            text-decoration: none;
+            transition: all var(--duration-normal) var(--ease-standard);
+            padding: 12px 24px;
+            border: 1px solid var(--color-black);
+            border-radius: var(--radius-base);
+            background: var(--color-white);
+        }
+
+        .contact-link:hover {
+            background: var(--color-black);
+            color: var(--color-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .designer-photo {
+                width: 140px;
+                height: 140px;
+                margin-bottom: var(--space-24);
+            }
+
+            .hero {
+                padding: var(--space-24);
+                min-height: 100vh;
+            }
+
+            .hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .hero p {
+                font-size: var(--font-size-lg);
+            }
+
+            .scroll-down {
+                bottom: 30px;
+            }
+
+            .scroll-down-text {
+                font-size: 11px;
+            }
+
+            .work-section {
+                padding: 60px 0 80px;
+            }
+
+            .work-title {
+                font-size: var(--font-size-xl);
+                margin-bottom: 40px;
+                padding: 0 var(--space-16);
+            }
+
+            .carousel-container {
+                margin-bottom: 16px;
+            }
+
+            .carousel-track {
+                gap: 16px;
+            }
+
+            .email-card {
+                width: 240px;
+            }
+
+            .email-card-content {
+                padding: 16px;
+            }
+
+            .modal {
+                padding: var(--space-16);
+            }
+
+            .modal-content {
+                max-width: 95vw;
+                max-height: 85vh;
+            }
+
+            .modal-close {
+                top: 16px;
+                right: 16px;
+                width: 36px;
+                height: 36px;
+                font-size: 20px;
+            }
+
+            .modal-email-image {
+                max-width: 100%;
+                max-height: 85vh;
+                border-radius: var(--radius-base);
+            }
+
+            .contact-section {
+                padding: 60px var(--space-24);
+                min-height: 70vh;
+            }
+
+            .contact-title {
+                font-size: var(--font-size-2xl);
+            }
+
+            .contact-text {
+                font-size: var(--font-size-base);
+            }
+
+            .contact-link {
+                font-size: var(--font-size-base);
+                padding: 10px 20px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .designer-photo {
+                width: 120px;
+                height: 120px;
+                margin-bottom: var(--space-16);
+            }
+
+            .hero h1 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .hero p {
+                font-size: var(--font-size-base);
+            }
+
+            .email-card {
+                width: 200px;
+            }
+
+            .carousel-track.left {
+                animation: scrollLeft 40s linear infinite;
+            }
+
+            .carousel-track.right {
+                animation: scrollRight 40s linear infinite;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="header">
-            <div class="header__container container">
-                <div class="header__logo">
-                    <a href="index.html"><img class="logo" src="../img/logo.svg" /></a>
-                </div>
-                <nav class="header__menu">
-                    <ul class="header__list">
-                        <a href="index.html"><li class="header__item">Home</li></a>
-                        <a href="./pages/about.html"><li class="header__item">About me</li></a>
-                        <a href="./pages/intouch.html"><li class="header__item">Contact</li></a>
-                    </ul>
-                </nav>
-                <div class="burger">
-                    <span></span>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="designer-photo">
+                <!-- Replace the src attribute below with your own photo URL -->
+                <img src="https://i.ibb.co/twY1qqNv/1695312716140.jpg" alt="Diego">
             </div>
-        </header>
-        <div class="main">
-            <div class="main__container container">
-                <div class="main__img-block">
-                    <img class="main__img" src="../img/main-img.jpg" />
-                </div>
-                <div class="main__text-block">
-                    <h2 class="main__title title">Hey there!</h2>
-                    <h3 class="main__subtitle">I’m Diego, a UX/UI designer
-                        and I’m ready to work.</h3>
-                    <a class="main__button" href="./pages/intouch.html">Get in touch <img class="arrow1" src="../img/arrow1.svg" /></a>
-                </div>
+            <h1>I'm Diego, email designer</h1>
+            <p>I create thoughtful, engaging email experiences that connect brands with their audiences. Here's some of my work.</p>
+        </div>
+        <div class="scroll-down" id="scrollDown">
+            <span class="scroll-down-text">scroll down</span>
+            <span class="scroll-down-arrow">↓</span>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work-section">
+        <h2 class="work-title">my work</h2>
+        
+        <!-- First Carousel - Scrolls Left -->
+        <div class="carousel-container">
+            <div class="carousel-track left" id="carousel1"></div>
+        </div>
+
+        <!-- Second Carousel - Scrolls Right -->
+        <div class="carousel-container">
+            <div class="carousel-track right" id="carousel2"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-content">
+            <h2 class="contact-title">contact me</h2>
+            <p class="contact-text">Let's work together. I'd love to hear about your project.</p>
+            <div class="contact-links">
+                <a href="mailto:hello@emaildesigner.com" class="contact-link" target="_blank">diegochevarriaz@gmail.com</a>
+                <a href="https://www.linkedin.com/in/diegoechevarriaz/" class="contact-link" target="_blank">LinkedIn</a>
             </div>
         </div>
-        <div class="gallery">
-            <div class="gallery__container container">
-                <div class="gallery__block">
-                    <div class="gallery__img-block">
-                        <a href="./pages/meal-master.html"><img class="gallery__img" src="../img/gallery1.jpg" /></a>
-                    </div>
-                    <div class="gallery__img-block1">
-                        <a href="./pages/meal-master.html"><img class="gallery__img1" src="../img/gallery01.jpg" /></a>
-                    </div>
-                    <div class="gallery__text-block">
-                        <h2 class="gallery__title title2">Meal Master</h2>
-                        <p class="gallery__text text">UX / UI</p>
-                    </div>
-                    <button class="gallery__arrow">
-                        <a href="./pages/meal-master.html"><img class="arrow2" src="../img/arrow2.svg" /></a>
-                    </button>
-                </div>
-                <div class="gallery__block">
-                    <div class="gallery__img-block">
-                        <a href="./pages/pirate.html"><img class="gallery__img" src="../img/gallery2.jpg" /></a>
-                    </div>
-                    <div class="gallery__img-block1">
-                        <a href="./pages/pirate.html"><img class="gallery__img1" src="../img/gallery02.jpg" /></a>
-                    </div>
-                    <div class="gallery__text-block">
-                        <h2 class="gallery__title title2">PirateBlood Studios</h2>
-                        <p class="gallery__text text">UX / UI</p>
-                    </div>
-                    <button class="gallery__arrow">
-                        <a href="./pages/pirate.html"><img class="arrow2" src="../img/arrow2.svg" /></a>
-                    </button>
-                </div>
-                <div class="gallery__block">
-                    <div class="gallery__img-block">
-                        <a href="./pages/julia.html"><img class="gallery__img" src="../img/gallery3.jpg" /></a>
-                    </div>
-                    <div class="gallery__img-block1">
-                        <a href="./pages/julia.html"><img class="gallery__img1" src="../img/gallery03.jpg" /></a>
-                    </div>
-                    <div class="gallery__text-block">
-                        <h2 class="gallery__title title2">Julia Sobchenko</h2>
-                        <p class="gallery__text text">UX / UI</p>
-                    </div>
-                    <button class="gallery__arrow">
-                        <a href="./pages/julia.html"><img class="arrow2" src="../img/arrow2.svg" /></a>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="footer__container container">
-                <p class="footer__text">© 2023 Diego Echevarria</p>
-            </div>
-        </footer>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-close" id="modalClose">&times;</div>
+        <div class="modal-content" id="modalContent"></div>
     </div>
+
     <script>
-        document.querySelector('.burger').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.header__menu').classList.toggle('open');
-        })
+        // Clean email designs data structure
+        // Replace the empty image strings with your own image URLs
+        const emailDesigns = [
+            { id: 1, title: "Newsletter Design", image: "https://i.ibb.co/GQGbb8hT/The-Ghost-Proof-Wallet.png" },
+            { id: 2, title: "Welcome Email", image: "https://i.ibb.co/yByTyKtC/Recent-Reviews.png" },
+            { id: 3, title: "Promotional Campaign", image: "https://i.ibb.co/gMpzkJ7h/Gloves-Promo.png" },
+            { id: 4, title: "Order Confirmation", image: "https://i.ibb.co/TM3nYn00/Media-Publications.jpg" },
+            { id: 5, title: "Event Invitation", image: "https://i.ibb.co/bM4HY3rd/Featherweight-vs-Jumpmats.png" },
+            { id: 6, title: "Product Launch", image: "https://i.ibb.co/FbMSwkTH/Self-Care-Awareness-Month.jpg" },
+            { id: 7, title: "Weekly Digest", image: "https://i.ibb.co/rKL9ZwLb/Happy-Halloween.png" },
+            { id: 8, title: "Shipping Notification", image: "https://i.ibb.co/NdcnrNf0/Which-Range-is-right-for-you.png" },
+            { id: 9, title: "Seasonal Campaign", image: "https://i.ibb.co/TMQ4gtcK/Gi-s-promo.jpg" },
+            { id: 10, title: "Re-engagement Campaign", image: "https://i.ibb.co/P0g6VhL/Flex-Lotion-Feature.png" },
+            { id: 11, title: "Feedback Request", image: "https://i.ibb.co/TM3nYn00/Media-Publications.jpg" },
+            { id: 12, title: "Account Update", image: "https://i.ibb.co/27HmBNb4/Testimonials.png" }
+        ];
+
+        function createEmailCard(email) {
+            const card = document.createElement('div');
+            card.className = 'email-card';
+            
+            // Use image if provided, otherwise show placeholder
+            const imageContent = email.image 
+                ? `<img src="${email.image}" alt="${email.title}" style="width: 100%; aspect-ratio: 9/16; object-fit: cover; object-position: top; border-radius: var(--radius-base);">`
+                : `<div class="email-card-placeholder">Image Placeholder</div>`;
+            
+            card.innerHTML = `
+                <div class="email-card-content">
+                    ${imageContent}
+                    <button class="email-card-button" onclick="openModal(${email.id})">Open</button>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function initCarousels() {
+            const carousel1 = document.getElementById('carousel1');
+            const carousel2 = document.getElementById('carousel2');
+            
+            // First carousel: items 0-5
+            const firstSet = emailDesigns.slice(0, 6);
+            // Second carousel: items 6-11
+            const secondSet = emailDesigns.slice(6, 12);
+            
+            // Duplicate for seamless loop
+            [...firstSet, ...firstSet].forEach(email => {
+                carousel1.appendChild(createEmailCard(email));
+            });
+            
+            [...secondSet, ...secondSet].forEach(email => {
+                carousel2.appendChild(createEmailCard(email));
+            });
+        }
+
+        function openModal(emailId) {
+            const email = emailDesigns.find(e => e.id === emailId);
+            if (!email) return;
+            
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modalContent');
+            
+            // Display email image or placeholder in the modal
+            if (email.image) {
+                modalContent.innerHTML = `
+                    <img src="${email.image}" alt="${email.title}" class="modal-email-image" style="border: none;">
+                `;
+            } else {
+                modalContent.innerHTML = `
+                    <div class="modal-email-image" style="width: 400px; aspect-ratio: 9/16; background: var(--color-gray-200); border: 2px dashed var(--color-border); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: var(--color-text-secondary); font-size: 18px; font-weight: var(--font-weight-medium);">
+                        Email Image Placeholder
+                    </div>
+                `;
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Initialize
+        initCarousels();
+
+        // Modal close handlers
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target.id === 'modal') {
+                closeModal();
+            }
+        });
+
+        // ESC key to close modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Scroll down arrow functionality
+        const scrollDownElement = document.getElementById('scrollDown');
+        let hasScrolled = false;
+
+        window.addEventListener('scroll', () => {
+            if (!hasScrolled && window.scrollY > 100) {
+                hasScrolled = true;
+                scrollDownElement.classList.add('hidden');
+            }
+        });
+
+        scrollDownElement.addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
