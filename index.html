@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Echevarria</title>
+    <title>Email Designer Portfolio</title>
     <style>
         :root {
             --color-white: rgba(255, 255, 255, 1);
@@ -212,11 +212,24 @@
         }
 
         .carousel-track.left {
-            animation: scrollLeft 30s linear infinite;
+            animation: scrollLeft 15s linear infinite;
         }
 
         .carousel-track.right {
-            animation: scrollRight 30s linear infinite;
+            animation: scrollRight 15s linear infinite;
+        }
+
+        .carousel-track.dragging {
+            animation-play-state: paused;
+            cursor: grabbing;
+        }
+
+        .carousel-container {
+            cursor: grab;
+        }
+
+        .carousel-container:active {
+            cursor: grabbing;
         }
 
         @keyframes scrollLeft {
@@ -559,11 +572,11 @@
             }
 
             .carousel-track.left {
-                animation: scrollLeft 40s linear infinite;
+                animation: scrollLeft 20s linear infinite;
             }
 
             .carousel-track.right {
-                animation: scrollRight 40s linear infinite;
+                animation: scrollRight 20s linear infinite;
             }
         }
     </style>
@@ -601,7 +614,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+   <section class="contact-section">
         <div class="contact-content">
             <h2 class="contact-title">contact me</h2>
             <p class="contact-text">Let's work together. I'd love to hear about your project.</p>
@@ -672,6 +685,69 @@
             [...secondSet, ...secondSet].forEach(email => {
                 carousel2.appendChild(createEmailCard(email));
             });
+            
+            // Initialize drag functionality
+            initDragFunctionality(carousel1);
+            initDragFunctionality(carousel2);
+        }
+
+        function initDragFunctionality(carouselTrack) {
+            let isDragging = false;
+            let startX = 0;
+            let currentTranslate = 0;
+            let prevTranslate = 0;
+
+            // Mouse events
+            carouselTrack.addEventListener('mousedown', dragStart);
+            carouselTrack.addEventListener('mousemove', drag);
+            carouselTrack.addEventListener('mouseup', dragEnd);
+            carouselTrack.addEventListener('mouseleave', dragEnd);
+
+            // Touch events
+            carouselTrack.addEventListener('touchstart', dragStart, { passive: false });
+            carouselTrack.addEventListener('touchmove', drag, { passive: false });
+            carouselTrack.addEventListener('touchend', dragEnd);
+
+            function dragStart(e) {
+                isDragging = true;
+                startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+                
+                // Get current position from transform
+                const transform = window.getComputedStyle(carouselTrack).transform;
+                if (transform !== 'none') {
+                    const matrix = new DOMMatrix(transform);
+                    prevTranslate = matrix.m41;
+                } else {
+                    prevTranslate = 0;
+                }
+                
+                carouselTrack.classList.add('dragging');
+            }
+
+            function drag(e) {
+                if (!isDragging) return;
+                
+                e.preventDefault();
+                const currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+                const diff = currentX - startX;
+                currentTranslate = prevTranslate + diff;
+                
+                carouselTrack.style.transform = `translateX(${currentTranslate}px)`;
+            }
+
+            function dragEnd() {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                
+                // Remove inline transform and dragging class to resume animation
+                carouselTrack.style.transform = '';
+                carouselTrack.classList.remove('dragging');
+                
+                // Reset to allow animation to continue smoothly
+                prevTranslate = 0;
+                currentTranslate = 0;
+            }
         }
 
         function openModal(emailId) {
